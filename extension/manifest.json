@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Padho Mere Bhai/Behen!",
+    "version": "1.0",
+    "description": "Please focus on studies",
+    "permissions": ["activeTab","tabs","webNavigation"],
+    "host_permissions" : ["<all_urls>"],
+    "web_accessible_resources": [{
+      "resources" : ["namaste.png"],
+      "matches" : ["<all_urls>"]
+    }],
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["content.js"]
+        }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons" : {
+      "128" : "namaste.png"
+    }
+}
